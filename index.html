@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comiquería Central - Pre Entrega 5</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        PRE-ENTREGA 5 · JAVASCRIPT · OBJETOS
+    </div>
+
+    <header class="header">
+        <div class="header-container">
+
+            <a href="#inicio" class="logo">
+                COMIQUERÍA <span>CENTRAL</span>
+            </a>
+
+            <div class="search-box">
+                <input
+                    id="buscarInput"
+                    type="text"
+                    placeholder="¿Qué estás buscando?"
+                    aria-label="Buscar productos"
+                >
+                <button id="buscarBtn" type="button">Buscar</button>
+            </div>
+
+            <button
+                id="abrirCarritoBtn"
+                class="cart-button"
+                type="button"
+            >
+                Carrito (<span id="cantidadCarrito">0</span>)
+            </button>
+
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#simulador">Simulador</a>
+            <button type="button" id="navCarritoBtn">Carrito</button>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-overlay">
+                <div class="hero-content">
+
+                    <span class="hero-tag">COMIQUERÍA CENTRAL</span>
+
+                    <h1>Tu próxima historia<br>empieza acá.</h1>
+
+                    <p>
+                        Cómics y mangas en un simulador de compra hecho
+                        con JavaScript, Arrays y Objetos.
+                    </p>
+
+                    <a class="btn-primary hero-link" href="#catalogo">
+                        Ver catálogo
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="catalogo">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">NUESTRO CATÁLOGO</span>
+                    <h2>Productos</h2>
+                </div>
+
+                <span class="section-line"></span>
+            </div>
+
+            <div
+                id="mensajeBusqueda"
+                class="search-message"
+                aria-live="polite"
+            ></div>
+
+            <div id="productosGrid" class="products-grid"></div>
+
+        </section>
+
+        <section class="simulator-section" id="simulador">
+
+            <div class="simulator-card">
+
+                <div>
+                    <span class="section-kicker">PRE-ENTREGA 5</span>
+
+                    <h2>Simulador de compra</h2>
+
+                    <p>
+                        Cada producto es una instancia de la clase Producto:
+                        tiene precio, categoría y stock propios. Al agregarlo
+                        al carrito, su método vender() actualiza el stock.
+                    </p>
+                </div>
+
+                <button
+                    id="iniciarSimuladorBtn"
+                    class="btn-primary"
+                    type="button"
+                >
+                    Iniciar simulador
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="carritoOverlay" class="cart-overlay"></div>
+
+    <aside id="carritoPanel" class="cart-panel">
+
+        <div class="cart-header">
+            <div>
+                <span class="section-kicker">TU COMPRA</span>
+                <h2>Carrito</h2>
+            </div>
+
+            <button
+                id="cerrarCarritoBtn"
+                class="close-cart"
+                type="button"
+            >
+                ×
+            </button>
+        </div>
+
+        <div id="carritoContenido" class="cart-content"></div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="totalCarrito">$0</strong>
+            </div>
+
+            <button
+                id="finalizarCompraBtn"
+                class="btn-primary cart-action"
+                type="button"
+            >
+                Finalizar compra
+            </button>
+
+            <button
+                id="vaciarCarritoBtn"
+                class="btn-secondary cart-action"
+                type="button"
+            >
+                Vaciar carrito
+            </button>
+
+        </div>
+
+    </aside>
+
+    <footer class="footer">
+        <p>Comiquería Central · Pre-Entrega 5 · JavaScript</p>
+    </footer>
+
+    <script src="js/catalogo.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
