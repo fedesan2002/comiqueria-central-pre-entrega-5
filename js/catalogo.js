@@ -176,14 +176,14 @@ function modificarCatalogo() {
 
 
 function obtenerReporteCatalogo(lista) {
-    let mensaje = "CATÁLOGO DISPONIBLE\\n\\n";
+    let mensaje = "CATÁLOGO DISPONIBLE\n\n";
 
     for (const producto of lista) {
         mensaje +=
-            "Producto: " + producto.nombre + "\\n" +
-            "Categoría: " + producto.categoria + "\\n" +
-            "Precio: " + formatearPrecio(producto.precio) + "\\n" +
-            "Stock: " + producto.stock + "\\n\\n";
+            "Producto: " + producto.nombre + "\n" +
+            "Categoría: " + producto.categoria + "\n" +
+            "Precio: " + formatearPrecio(producto.precio) + "\n" +
+            "Stock: " + producto.stock + "\n\n";
     }
 
     console.log(mensaje);
